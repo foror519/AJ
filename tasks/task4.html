@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Задание 4 — Вариант 3</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/task4.css" />
+  
+  
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="На главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Azeroth Journal</span>
+          <span class="brand-subtitle">задание 4</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Основное меню">
+        <a href="../index.html">Главная</a>
+        <a href="../tasks.html" class="active">Задания</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h1>Задание 4. DOM (Вариант 3)</h1>
+      </header>
+
+      <div class="article-grid">
+        <article class="prose">
+          <h2>Условия задания 3</h2>
+          <ol>
+            <li>На странице в части <code>aside</code> создать нумерованный список.</li>
+            <li>По нажатию на кнопку <strong>"Создать"</strong> фраза выводится в виде элемента многоуровневого списка.</li>
+            <li><strong>Общее:</strong> Четные нажатия — один цвет, нечетные — другой.</li>
+            <li><strong>Общее:</strong> Фразы не повторяются. Когда закончатся — alert.</li>
+            <li><strong>Общее:</strong> Кнопка "Перекрасить" делает четные строки жирными.</li>
+          </ol>
+        </article>
+        
+        <aside>
+          <div class="task-controls">
+            <button id="createBtn" class="btn">Создать</button>
+            <button id="recolorBtn" class="btn btn-recolor">Перекрасить</button>
+          </div>
+          
+          <h3>Результат:</h3>
+          <ol id="targetList">
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo" aria-hidden="true"></span>
+          <div>
+            <div class="footer-title">Azeroth Journal</div>
+            <div class="footer-note">Учебный сайт</div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Azeroth Journal</span>
+      <span class="muted">HTML • CSS • JS</span>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/task4.js"></script>
+  
+</body>
+</html>

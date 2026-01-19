@@ -1,0 +1,26 @@
+/* Контейнер сравнения: рядом, потом в колонку */
+.shot-compare{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Референс-картинка аккуратно вписывается */
+.shot-ref{
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;      /* чтобы по форме совпадало с .pic */
+  object-fit: contain;      /* референс не обрежется */
+  background: rgba(255,255,255,.05);
+}
+
+/* ✅ НЕ обрезать референс внутри figure.shot */
+.shot.has-pic img.shot-ref{
+  height: auto;           /* перебиваем height:160px */
+  object-fit: contain;    /* перебиваем cover */
+  width: min(200px, 100%);/* до 200px, но сжимается на мобилке */
+  aspect-ratio: 1 / 1;    /* сохраняем квадрат */
+  justify-self: center;
+  align-self: center;
+}

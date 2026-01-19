@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Задание 5 — Drag & Drop</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/task5.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="На главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Azeroth Journal</span>
+          <span class="brand-subtitle">задание 5</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Основное меню">
+        <a href="../index.html">Главная</a>
+        <a href="../tasks.html" class="active">Задания</a>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="nav-toggle-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h1>Задание 5. Drag & Drop (Вариант 2)</h1>
+      </header>
+
+      <div class="hint-block">
+        <div class="prose">
+            <h3>Условие:</h3>
+            <p>Соберите из разбросанных фигур композицию (Домик и Елку), перетаскивая элементы мышкой.</p>
+        </div>
+      </div>
+
+      <div class="canvas-area" id="canvas">
+        <div class="draggable shape-house-body" id="houseBody"></div>
+        <div class="draggable shape-roof" id="houseRoof"></div>
+        <div class="draggable shape-window" id="houseWindow"></div>
+
+        <div class="draggable shape-trunk" id="treeTrunk"></div>
+        <div class="draggable shape-tree-1" id="treeBottom"></div>
+        <div class="draggable shape-tree-2" id="treeMiddle"></div>
+        <div class="draggable shape-tree-3" id="treeTop"></div>
+      </div>
+
+    </div>
+  </main>
+  
+   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo" aria-hidden="true"></span>
+          <div>
+            <div class="footer-title">Azeroth Journal</div>
+            <div class="footer-note">Учебный сайт</div>
+          </div>
+        </div>
+      </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Azeroth Journal</span>
+      <span class="muted">HTML • CSS • JS</span>
+    </div>
+  </footer>
+    <script src="../assets/js/main.js"></script>
+	<script src="../assets/js/task5.js"></script>
+</body>
+</html>

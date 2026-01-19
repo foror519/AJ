@@ -1,0 +1,196 @@
+    .wash-wrap {
+      display: grid;
+      place-items: center;
+      padding: 8px 0 4px;
+	  height: 100%;
+    }
+	.article-grid{
+		align-items: stretch;
+	}
+
+    .wash-box {
+      --enter: 650ms;
+      --wash: 1300ms;
+      --orbit: 1400ms;
+      --r: 18px;
+
+      width: 200px;
+      height: 200px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+
+      position: relative;
+      overflow: hidden;
+
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      background: #f2f2f2;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+
+      padding: 0;
+      margin: 0;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .wash-box:focus-visible {
+      outline: 3px solid rgba(61, 132, 255, 0.55);
+      outline-offset: 3px;
+    }
+
+    .wash-garage {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      border-radius: 0 !important;
+      transform: translateZ(0);
+      filter: saturate(1.05);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .wash-box::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.35), transparent 55%);
+      opacity: 0.0;
+      transition: opacity 220ms ease;
+      pointer-events: none;
+    }
+    .wash-box:hover::after,
+    .wash-box:active::after { opacity: 1; }
+
+    .wash-label {
+		position: absolute;
+		top: 15px;
+		left: 0;
+		right: 0;
+		z-index: 4;
+		padding: 0; 
+		text-align: center;
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 1.2;
+		background: transparent;
+		backdrop-filter: none;
+		opacity: 0;
+		transform: translateY(-8px);
+		transition: opacity 200ms ease, transform 200ms ease;
+		pointer-events: none;
+}
+
+    .wash-label .t1,
+    .wash-label .t2 {
+      display: block;
+      transition: opacity 200ms ease;
+    }
+	
+	.wash-label .t1 { 
+		color: #ff0000; 
+}
+	
+    .wash-label .t2 { 
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		color: #0088ff; 
+		opacity: 0; 
+		transform: rotate(-5deg); 
+}
+
+    .wash-box:hover .wash-label,
+    .wash-box:active .wash-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .wash-box:active .wash-label .t1 { opacity: 0; }
+    .wash-box:active .wash-label .t2 { opacity: 1; }
+
+    .wash-move {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-58%, 58%);
+      transition:
+        transform var(--enter) cubic-bezier(.2, .85, .2, 1),
+        opacity 180ms ease;
+    }
+
+    .wash-box:hover .wash-move,
+    .wash-box:active .wash-move {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .wash-orbit {
+      position: absolute;
+      left: 50%;
+      top: 58%;
+      width: 0;
+      height: 0;
+      transform: translate(-50%, -50%);
+      }
+
+    .wash-car {
+      position: absolute;
+      left: -70px;
+      top: -45px;
+      width: 140px;
+      height: 90px;
+      will-change: transform;
+      transform-origin: 50% 50%;
+	  background: transparent; 
+	  box-shadow: none;
+    }
+
+    .wash-car img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transform: translateZ(0);
+	  background: transparent; 
+      box-shadow: none;
+    }
+
+    .car-clean { opacity: 1; transition: opacity var(--wash) ease; }
+    .car-wash  { opacity: 0; transition: opacity var(--wash) ease; }
+
+    .wash-box:active .car-clean { opacity: 0; }
+    .wash-box:active .car-wash  { opacity: 1; }
+
+    .wash-box:active .wash-car {
+      animation: spin var(--orbit) linear infinite;
+      animation-delay: var(--wash);
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(-360deg); }
+    }
+
+    .wash-box:active {
+      transform: scale(1.01);
+      animation: pulse 900ms ease-in-out infinite;
+      animation-delay: var(--wash);
+    }
+
+    @keyframes pulse {
+      0%   { transform: scale(1.00); }
+      50%  { transform: scale(1.05); }
+      100% { transform: scale(0.98); }
+    }

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Задание 2 — Azeroth Journal</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/pic.css" />
+  <link rel="stylesheet" href="../assets/css/task2.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="На главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Azeroth Journal</span>
+          <span class="brand-subtitle">задание 2</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button"
+              aria-label="Открыть меню"
+              aria-controls="site-nav"
+              aria-expanded="false">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Основное меню">
+        <a href="../index.html">Главная</a>
+        <a href="../tasks.html" class="active">Задания</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h1>Задание 2: Рисунок CSS. (заочники) 2025</h1>
+      </header>
+
+      <div class="article-grid">
+        <article class="prose">
+          <h2>Что сделать</h2>
+          <ol>
+            <li>Создать рисунки, с помощью стилевой таблицы pic.css.</li>
+            <li>Размер 200х200px. </li>
+            <li>Рисунок разместить в части Content</li>
+          </ol>
+
+        </article>
+	
+  <figure class="shot has-pic">
+  <div class="shot-compare">
+    <img class="shot-ref"
+         src="../assets/img/shroom.png"
+         alt="2 задание."
+         loading="lazy" />
+    <div class="pic" role="img" aria-label="CSS-рисунок: грибы, трава и пчела">
+      <div class="mushroom big"></div>
+      <div class="mushroom small"></div>
+      <div class="bee">
+        <span class="wing w1"></span>
+        <span class="wing w2"></span>
+        <span class="body"></span>
+        <span class="head"></span>
+      </div>
+        <span class="peak p1"></span>
+        <span class="peak p2"></span>
+        <span class="peak p3"></span>
+        <span class="peak p4"></span>
+    </div>
+  </div>
+
+  <figcaption>Задание 2: слева референс (.png), справа — отрисовка только CSS.</figcaption>
+</figure>
+		
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo" aria-hidden="true"></span>
+          <div>
+            <div class="footer-title">Azeroth Journal</div>
+            <div class="footer-note">Учебный сайт</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Azeroth Journal</span>
+      <span class="muted">HTML • CSS • JS</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
