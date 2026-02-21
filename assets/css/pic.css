@@ -19,13 +19,11 @@
   position: absolute;
   width: 110px;
   height: 120px;
-  bottom: 12px;
-  left: 22px;
-  --stem: #f1d8b8;
-  --stem-stroke: #7a4b22;
+  --stem: #d2cbc7;
+  --stem-stroke: #48060d;
 }
 
-.mushroom::before{
+.mushroom::before{ /*шляпка*/
   content: "";
   position: absolute;
   left: 6px;
@@ -46,32 +44,32 @@
     linear-gradient(#5d1e1a, #5d1e1a);
 }
 
-.mushroom::after{
+.mushroom::after{ /*ножка*/
   content: "";
   position: absolute;
-  left: 41px;
-  top: 47px;
+  left: 37px;
+  top: 31px;
   width: 34px;
-  height: 64px;
+  height: 76px;
   background: var(--stem);
   border: 2px solid var(--stem-stroke);
   border-radius: 50%;
   z-index: 6;
 }
 
-.mushroom.big{
-  left: 0px;
-  bottom: 12px;
+.mushroom.big{ /* весь большой гриб */
+  left: -2px;
+  bottom: 8px;
   transform: none;
   z-index: 9;
 }
 
-.mushroom.small{
-  left: 35px;
-  bottom: 25px;
+.mushroom.small{ /* весь мелкий гриб */
   transform-origin: 50% 100%;
-  transform: rotate(30deg) scale(0.6667);
+  transform: rotate(35deg) scale(0.69);
   z-index: 10;
+  bottom: 17px;
+  left: 19px;
 }
 
 .peak{
@@ -95,8 +93,8 @@
 
 .bee{
   position: absolute;
-  right: 16px;
-  top: 34px;
+  left: 73px;
+  top: 39px;
   width: 90px;
   height: 60px;
   z-index: 19;
@@ -106,8 +104,8 @@
   position: absolute;
   left: 38px;
   top: 26px;
-  width: 56px;
-  height: 28px;
+  width: 46px;
+  height: 18px;
   background: #ffd400;
   border: 1px solid rgba(0,0,0,0.35);
   border-radius: 50%;
@@ -119,8 +117,8 @@
   position: absolute;
   left: 32px;
   top: 42px;
-  width: 26px;
-  height: 26px;
+  width: 15px;
+  height: 15px;
   background: #ffd400;
   border: 1px solid rgba(0,0,0,0.35);
   border-radius: 50%;
@@ -131,24 +129,18 @@
 .bee .head::after{
   content: "";
   position: absolute;
-  top: 9px;
-  width: 7px;
-  height: 7px;
-  background: #000;
+  width: 5px;
+  height: 5px;
+  background: black;
   border-radius: 50%;
 }
 
-.bee .head::before{ left: 5px; }
-.bee .head::after { left: 12px; top: 15px; }
+.bee .head::before{top: 7px; left: 7px; }
+.bee .head::after {top: 3px; left: 3px; }
 
 .bee .wing{
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  z-index: 7; 
-  pointer-events: none;
+  z-index: 1; 
 }
 
 .bee .wing::before,
@@ -157,30 +149,31 @@
   position: absolute;
   width: 32px;
   height: 12px;
-  background: rgba(170, 220, 255, 0.75);
-  border: 1px solid rgba(0,0,0,0.35);
+  background: #6983f9;
+  border: 2px solid;
+  border-color: #4660c6;
   border-radius: 50%;
 }
 
 .bee .wing.w1::before{
-  left: 50px;
-  top: 7px;
-  transform: rotate(-80deg);
+  left: 40px;
+  top: 2px;
+  transform: rotate(90deg);
 }
 .bee .wing.w1::after{
-  left: 37px;
+  left: 24px;
   top: 12px;
-  transform: rotate(60deg);
+  transform: rotate(30deg);
 }
 
 .bee .wing.w2::before{
-  left: 65px;
-  top: 50px;
-  transform: rotate(60deg);
+  left: 63px;
+  top: 41px;
+  transform: rotate(40deg);
 }
 .bee .wing.w2::after{
-  left: 50px;
-  top: 55px;
-  transform: rotate(-80deg);
+  left: 53px;
+  top: 48px;
+  transform: rotate(-100deg);
 }
 
