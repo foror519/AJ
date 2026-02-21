@@ -1,12 +1,12 @@
-    .wash-wrap {
+.wash-wrap {
       display: grid;
       place-items: center;
       padding: 8px 0 4px;
-	  height: 100%;
+      height: 100%;
     }
-	.article-grid{
-		align-items: stretch;
-	}
+    .article-grid{
+        align-items: stretch;
+    }
 
     .wash-box {
       --enter: 650ms;
@@ -26,7 +26,7 @@
       overflow: hidden;
 
       border-radius: 16px;
-      border: 1px solid rgba(0, 0, 0, 0.14);
+      border: 1px solid #00000024;
       background: #f2f2f2;
       cursor: pointer;
       user-select: none;
@@ -39,7 +39,7 @@
     }
 
     .wash-box:focus-visible {
-      outline: 3px solid rgba(61, 132, 255, 0.55);
+      outline: 3px solid #3d84ff8c;
       outline-offset: 3px;
     }
 
@@ -61,7 +61,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.35), transparent 55%);
+      background: radial-gradient(circle at 50% 20%, #ffffff59, #ffffff00 55%);
       opacity: 0.0;
       transition: opacity 220ms ease;
       pointer-events: none;
@@ -70,22 +70,22 @@
     .wash-box:active::after { opacity: 1; }
 
     .wash-label {
-		position: absolute;
-		top: 15px;
-		left: 0;
-		right: 0;
-		z-index: 4;
-		padding: 0; 
-		text-align: center;
-		font-weight: 800;
-		font-size: 18px;
-		line-height: 1.2;
-		background: transparent;
-		backdrop-filter: none;
-		opacity: 0;
-		transform: translateY(-8px);
-		transition: opacity 200ms ease, transform 200ms ease;
-		pointer-events: none;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0; 
+        text-align: center;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.2;
+        background: transparent;
+        backdrop-filter: none;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 200ms ease, transform 200ms ease;
+        pointer-events: none;
 }
 
     .wash-label .t1,
@@ -93,19 +93,19 @@
       display: block;
       transition: opacity 200ms ease;
     }
-	
-	.wash-label .t1 { 
-		color: #ff0000; 
+    
+    .wash-label .t1 { 
+        color: #ff0000; 
 }
-	
+    
     .wash-label .t2 { 
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		color: #0088ff; 
-		opacity: 0; 
-		transform: rotate(-5deg); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #0088ff; 
+        opacity: 0; 
+        transform: rotate(-5deg); 
 }
 
     .wash-box:hover .wash-label,
@@ -151,8 +151,8 @@
       height: 90px;
       will-change: transform;
       transform-origin: 50% 50%;
-	  background: transparent; 
-	  box-shadow: none;
+      background: transparent; 
+      box-shadow: none;
     }
 
     .wash-car img {
@@ -163,7 +163,7 @@
       object-fit: contain;
       display: block;
       transform: translateZ(0);
-	  background: transparent; 
+      background: transparent; 
       box-shadow: none;
     }
 
